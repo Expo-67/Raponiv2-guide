@@ -93,7 +93,7 @@ export default function Services() {
                 href="#contact"
                 className="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors"
               >
-                Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                Contact-us <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </motion.div>
           ))}
