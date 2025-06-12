@@ -7,18 +7,18 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Sarah Janet",
-      role: "Homeowner",
-      quote: "Testimonial 1.",
+      quote:
+        "Raponi Landscaping transformed my backyard into a beautiful oasis. Their attention to detail and creativity exceeded my expectations!",
     },
     {
       name: "Michael Njoroge",
-      role: "Business Owner",
-      quote: "testimonial2",
+      quote:
+        " They provided exceptional service and my garden has never looked better.",
     },
     {
       name: "Emily Otieno",
-      role: "Homeowner",
-      quote: "Testimonial3!",
+      quote:
+        "I highly recommend Raponi Landscaping for their professionalism and expertise. They turned my vision into reality with stunning results!",
     },
   ];
 
