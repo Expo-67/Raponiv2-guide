@@ -9,12 +9,12 @@ import members from "../assets/w2.jpg";
 export default function Team() {
   const teamMembers = [
     {
-      name: "Gideon Sikento",
+      name: "Gideon Sekento",
       role: "Director",
       image: gideon,
     },
     {
-      name: "Joyce Topiya",
+      name: "Joyce Tipaya",
       role: "Manager",
       image: joyce,
     },
