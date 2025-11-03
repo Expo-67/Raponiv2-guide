@@ -35,12 +35,17 @@ export default function AboutUs() {
               outdoor experiences. Our passion for plants and design excellence
               drives everything we do.
             </p>
-            <p className="text-gray-700 mb-8 text-lg">
+            <p className="text-gray-700 mb-6 text-lg">
               We take pride in our work, treating each garden as a unique canvas
               that reflects the personality and lifestyle of our clients. From
               concept to completion, we're committed to exceeding your
               expectations.
             </p>
+            <div className="bg-green-50 border-l-4 border-green-600 p-4 mb-8">
+              <p className="text-green-900 font-semibold">
+                ✅ We are KRA Compliant 
+              </p>
+            </div>
             <Link
               href="#team"
               className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors font-medium"

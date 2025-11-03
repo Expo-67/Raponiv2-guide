@@ -1,6 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import treeDonations from "../assets/tree donations.jpg";
+import csrEnvironment from "../assets/CSR enviroment activities.jpg";
+import dragonFruit from "../assets/dragon fruit farming1.jpg";
+import landscape1 from "../assets/add 5.jpg";
+import landscape2 from "../assets/kisaju 5.jpg";
+import landscape3 from "../assets/g3.jpg";
+import landscape4 from "../assets/l9.jpg";
+import landscape5 from "../assets/add 5.jpg";
+import hardscape from "../assets/l6.jpg";
+import water from "../assets/w1.jpg";
 import { motion } from "framer-motion";
 import { Leaf, ArrowRight } from "lucide-react";
 
@@ -9,50 +20,44 @@ export default function Services() {
     {
       title: "Landscape Design",
       icon: "🏞️",
+      image: landscape1,
       description:
         "Custom landscape design and planning to create your dream outdoor space.",
     },
     {
       title: "Garden Maintenance",
       icon: "🌱",
+      image: landscape2,
       description:
         "Regular garden care and maintenance to keep your outdoor space thriving year-round.",
     },
     {
-      title: "Outdoor Lighting",
-      icon: "💡",
-      description:
-        "Enhance beauty and security with custom outdoor lighting solutions.",
-    },
-    {
-      title: "Water Features",
-      icon: "💦",
-      description:
-        "Custom fountains, ponds, and water features to add tranquility to your landscape.",
-    },
-    {
       title: "Sustainable Landscaping",
       icon: "♻️",
+      image: landscape4,
       description:
         "Eco-friendly practices and designs that conserve water and support local ecosystems.",
     },
     {
       title: "Hardscaping",
       icon: "🧱",
+      image: hardscape,
       description:
         "Beautiful patios, walkways, and retaining walls to enhance your outdoor living areas.",
     },
     {
-      title: "Drainage Solutions",
-      icon: "🌧️",
+      title: "CSR Environmental Activities",
+      icon: "🌍",
+      image: csrEnvironment,
       description:
-        "Effective drainage systems to protect your property from water damage.",
+        "Tree growing initiatives including adoption of main street in Ngong town from PCEA church and school. Tree donations to churches, schools, and rehabilitation centers in Ngong.",
     },
     {
-      title: "Environmental Conservation",
-      icon: "🌍",
+      title: "Drago & Fruit Farming",
+      icon: "🌳",
+      image: dragonFruit,
       description:
-        "Community projects and practices that support environmental sustainability.",
+        "Specialized cultivation of drago trees and various fruit species, promoting sustainable agriculture and biodiversity.",
     },
   ];
 
@@ -80,21 +85,36 @@ export default function Services() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               key={index}
-              className="border border-gray-100 rounded-xl p-8 hover:shadow-xl transition-all duration-300 hover:border-green-100 group bg-white"
+              className="border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-green-100 group bg-white"
             >
-              <div className="text-4xl mb-5 bg-green-50 h-16 w-16 flex items-center justify-center rounded-full group-hover:bg-green-100 transition-colors">
-                {service.icon}
+              {service.image ? (
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="p-8 pb-0">
+                  <div className="text-4xl mb-5 bg-green-50 h-16 w-16 flex items-center justify-center rounded-full group-hover:bg-green-100 transition-colors">
+                    {service.icon}
+                  </div>
+                </div>
+              )}
+              <div className="p-8">
+                <h3 className="text-xl font-bold mb-3 text-green-900">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <Link
+                  href="#contact"
+                  className="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors"
+                >
+                  Contact-us <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-green-900">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <Link
-                href="#contact"
-                className="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors"
-              >
-                Contact-us <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
             </motion.div>
           ))}
         </div>

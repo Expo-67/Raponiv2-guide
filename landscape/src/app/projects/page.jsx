@@ -16,7 +16,13 @@ import nyasingo2 from "../assets/nyasingo2.jpg";
 import dhl from "../assets/dhl.jpg";
 import dhl2 from "../assets/l16.jpg";
 import dhl3 from "../assets/l9.jpg";
-
+import karuri5 from "../assets/karuri level 4 1.jpg"
+import karuri6 from "../assets/karuri2 - Copy.jpg"
+import kisaju1 from "../assets/kisaju 1.jpg"
+import kisaju2 from "../assets/kisaju 3.jpg"
+import kisaju3 from "../assets/kisaju 5.jpg"
+import dragonfruit1 from "../assets/dragon fruit farming1.jpg"
+import dragonfruit2 from "../assets/dragon fruit farming2.jpg"
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [expandedProject, setExpandedProject] = useState(null);
@@ -69,15 +75,15 @@ export default function ProjectsPage() {
     // Karuri project
     {
       id: 2,
-      title: "Ongoing project at Karuri level 4 hospital",
-      date: "21st February 2025 to date",
+      title: "Karuri Level 4 Hospital",
+      date: "21st February 2025 - Completed",
       description:
         "A comprehensive landscaping project for Karuri Level 4 Hospital, featuring sustainable design elements, healing gardens, and accessible outdoor spaces for patients, staff, and visitors.",
       image: karuri,
       category: "Public Space",
-      status: "ongoing",
+      status: "completed",
       client: "Kiambu County Government",
-      location: "Kiambu, Kenya",
+      location: "Karuri, Kiambu County, Kenya",
       scope: [
         "Healing garden design and implementation",
         "Accessible pathways and seating areas",
@@ -165,6 +171,39 @@ export default function ProjectsPage() {
         "Enhanced property values and aesthetics",
       ],
       galleryImages: [dhl2, dhl3],
+    },
+
+    // Kisaju project
+    {
+      id: 5,
+      title: "Kisaju Landscaping Project",
+      date: "August 2025 - September 2025",
+      description:
+        "A comprehensive landscaping project in Kisaju featuring sustainable design, efficient irrigation systems, and thoughtful plant selection. Currently under maintenance contract to ensure long-term landscape health and aesthetic appeal.",
+      image: karuri, // Replace with actual Kisaju image when available
+      category: "Commercial",
+      status: "completed",
+      client: "Private Client",
+      location: "Kisaju, Kenya",
+      scope: [
+        "Landscape design and planning",
+        "Plant selection and installation",
+        "Irrigation system installation",
+        "Hardscaping elements",
+        "Ongoing maintenance contract",
+      ],
+      challenges: [
+        "Working within project timelines",
+        "Soil preparation and improvement",
+        "Implementing water-efficient systems",
+      ],
+      results: [
+        "Completed landscaping transformation",
+        "Efficient irrigation system in place",
+        "Active maintenance contract ensuring landscape health",
+        "Enhanced property aesthetics and value",
+      ],
+      galleryImages: [karuri2, karuri3], // Replace with actual Kisaju images when available
     },
   ];
 

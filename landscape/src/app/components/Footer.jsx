@@ -125,16 +125,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="#"
-                  className="hover:text-yellow-300 transition-colors flex items-center"
-                >
-                  <ChevronRight className="w-4 h-4 mr-2" />
-                  Drainage Installation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
+                  href="#services"
                   className="hover:text-yellow-300 transition-colors flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-2" />
@@ -143,7 +134,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#services"
                   className="hover:text-yellow-300 transition-colors flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-2" />
@@ -152,11 +143,20 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#services"
                   className="hover:text-yellow-300 transition-colors flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-2" />
                   Hardscaping
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#services"
+                  className="hover:text-yellow-300 transition-colors flex items-center"
+                >
+                  <ChevronRight className="w-4 h-4 mr-2" />
+                  CSR Activities
                 </Link>
               </li>
             </ul>
@@ -164,8 +164,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-green-800 mt-12 pt-8 text-center text-gray-300">
           <p>
-            &copy; {new Date().getFullYear()} redevops Raponi Gardens - All
-            rights reserved | Designed by redevops
+            &copy; {new Date().getFullYear()}  All rights reserved | Made with ❤️ by redevops
           </p>
         </div>
       </div>

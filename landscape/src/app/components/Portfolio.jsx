@@ -5,9 +5,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Leaf, ArrowRight } from "lucide-react";
 import rubis from "../assets/rubis 2.jpg";
-import karuri from "../assets/karuri.jpg";
-import nyasingo from "../assets/nyasingo.jpg";
-import dhl from "../assets/dhl.jpg";
+import karuriLevel4 from "../assets/karuri level 4 1.jpg";
+import kisaju from "../assets/kisaju 1.jpg";
+import dragonFruit from "../assets/dragon fruit farming1.jpg";
 export default function Portfolio() {
   return (
     <section id="projects" className="py-20 bg-gray-50">
@@ -24,15 +24,15 @@ export default function Portfolio() {
               <div className="relative h-74 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110">
                 <Image
                   src={rubis}
-                  alt="Landscape project 1"
+                  alt="Rubis Commercial Landscaping"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <Image
-                  src={karuri}
-                  alt="Landscape project 2"
+                  src={karuriLevel4}
+                  alt="Karuri Level 4 Hospital"
                   fill
                   className="object-cover"
                 />
@@ -41,16 +41,16 @@ export default function Portfolio() {
             <div className="space-y-6 mt-12">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <Image
-                  src={nyasingo}
-                  alt="Landscape project 3"
+                  src={kisaju}
+                  alt="Kisaju Landscaping Project"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <Image
-                  src={dhl}
-                  alt="Landscape project 4"
+                  src={dragonFruit}
+                  alt="Dragon Fruit Farming"
                   fill
                   className="object-cover"
                 />
