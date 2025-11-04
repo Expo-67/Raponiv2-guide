@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Globe } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -66,6 +66,22 @@ export default function Contact() {
                   <p className="font-medium text-green-900 text-lg">
                     P.O Box 574-00208 Ngong Hills
                   </p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center mr-4 shadow-lg">
+                  <Globe className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600">Website</p>
+                  <a
+                    href="https://www.raponigardens.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-green-900 text-lg hover:text-green-700 transition-colors"
+                  >
+                    www.raponigardens.com
+                  </a>
                 </div>
               </div>
             </div>

@@ -7,9 +7,9 @@ import csrEnvironment from "../assets/CSR enviroment activities.jpg";
 import dragonFruit from "../assets/dragon fruit farming1.jpg";
 import landscape1 from "../assets/add 5.jpg";
 import landscape2 from "../assets/kisaju 5.jpg";
-import landscape3 from "../assets/g3.jpg";
+import landscape3 from "../assets/enviroment 2.jpg";
 import landscape4 from "../assets/l9.jpg";
-import landscape5 from "../assets/add 5.jpg";
+import landscape5 from "../assets/dragon fruit farming2.jpg";
 import hardscape from "../assets/l6.jpg";
 import water from "../assets/w1.jpg";
 import { motion } from "framer-motion";
@@ -58,6 +58,20 @@ export default function Services() {
       image: dragonFruit,
       description:
         "Specialized cultivation of drago trees and various fruit species, promoting sustainable agriculture and biodiversity.",
+    },
+    {
+      title: "Agribusiness",
+      icon: "🌾",
+      image: landscape3,
+      description:
+        "Empowering communities through agriculture. We have a farm in Kajiado helping Masais do farming, promoting sustainable livelihoods and food security.",
+    },
+    {
+      title: "Apple Farming",
+      icon: "🍎",
+      image: landscape5,
+      description:
+        "Professional apple farming solutions with expertise in cultivation, pest management, and harvesting techniques for optimal yield.",
     },
   ];
 
