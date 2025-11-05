@@ -1,9 +1,30 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const subject = `Landscape Inquiry: ${formData.service || "General"}`;
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AService Needed: ${formData.service}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    
+    window.location.href = `mailto:otipogideon@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+  };
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 md:px-8">
@@ -97,7 +118,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold mb-6 text-green-900">
                 Contact-us at Raponi Gardens
               </h3>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label
                     htmlFor="name"
@@ -108,8 +129,11 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
                     placeholder="John Doe"
+                    required
                   />
                 </div>
                 <div>
@@ -122,8 +146,11 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
                     placeholder="johndoe@example.com"
+                    required
                   />
                 </div>
                 <div>
@@ -136,7 +163,10 @@ export default function Contact() {
                   <div className="relative">
                     <select
                       id="service"
+                      value={formData.service}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors appearance-none"
+                      required
                     >
                       <option value="" disabled>
                         Select a service...
@@ -179,8 +209,11 @@ export default function Contact() {
                   <textarea
                     id="message"
                     rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
                     placeholder="Tell us about your project..."
+                    required
                   ></textarea>
                 </div>
                 <button
