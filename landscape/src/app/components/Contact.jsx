@@ -11,19 +11,47 @@ export default function Contact() {
     service: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
+    const { id, name, value } = e.target;
+    const fieldName = id || name;
+    setFormData((prev) => ({ ...prev, [fieldName]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const subject = `Landscape Inquiry: ${formData.service || "General"}`;
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AService Needed: ${formData.service}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    
-    window.location.href = `mailto:otipogideon@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch("https://formsubmit.co/otipogideon@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          service: formData.service,
+          message: formData.message,
+          _subject: `Landscape Inquiry: ${formData.service || "General"}`,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitMessage("Thank you! Your message has been sent successfully.");
+        setFormData({ name: "", email: "", service: "", message: "" });
+      } else {
+        setSubmitMessage("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setSubmitMessage("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return (
     <section id="contact" className="py-20 bg-gray-50">
@@ -216,11 +244,23 @@ export default function Contact() {
                     required
                   ></textarea>
                 </div>
+                {submitMessage && (
+                  <div
+                    className={`p-4 rounded-lg text-center font-medium ${
+                      submitMessage.includes("success")
+                        ? "bg-green-100 text-green-800"
+                        : "bg-red-100 text-red-800"
+                    }`}
+                  >
+                    {submitMessage}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white px-6 py-4 rounded-lg font-bold hover:bg-green-700 transition-colors flex items-center justify-center shadow-lg hover:shadow-xl transform hover:translate-y-[-2px]"
+                  disabled={isSubmitting}
+                  className="w-full bg-green-600 text-white px-6 py-4 rounded-lg font-bold hover:bg-green-700 transition-colors flex items-center justify-center shadow-lg hover:shadow-xl transform hover:translate-y-[-2px] disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none"
                 >
-                  Submit
+                  {isSubmitting ? "Sending..." : "Submit"}
                 </button>
               </form>
             </div>
