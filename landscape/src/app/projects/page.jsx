@@ -7,6 +7,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import rubis from "../assets/rubis 2.jpg";
 import rubis2 from "../assets/rubis.jpg";
+import newR1 from "../assets/new r1.jpeg";
+import newR2 from "../assets/new r2.jpeg";
+import newR3 from "../assets/new r3.jpeg";
+import newR4 from "../assets/new r4.jpeg";
+import newR5 from "../assets/new r5.jpeg";
 import karuri from "../assets/karuri.jpg";
 import karuri2 from "../assets/karuri2.jpg";
 import karuri3 from "../assets/karuri3.jpg";
@@ -42,7 +47,7 @@ export default function ProjectsPage() {
     {
       id: 1,
       title: "Rubis Commercial Landscaping",
-      date: "December 2019 - October 2022",
+      date: "14th Dec 2025 - 25th January 2026",
       description:
         "A complete commercial landscape transformation for Rubis, featuring drought-resistant plants, efficient irrigation systems, and custom hardscaping that complements their corporate identity.",
       image: rubis,
@@ -69,7 +74,7 @@ export default function ProjectsPage() {
         "Improved outdoor spaces for employees and visitors",
         "Sustainable landscape that requires minimal maintenance",
       ],
-      galleryImages: [rubis2],
+      galleryImages: [rubis2, newR1, newR2, newR3, newR4, newR5],
     },
 
     // Karuri project
