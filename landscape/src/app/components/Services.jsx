@@ -53,11 +53,11 @@ export default function Services() {
         "Tree growing initiatives including adoption of main street in Ngong town from PCEA church and school. Tree donations to churches, schools, and rehabilitation centers in Ngong.",
     },
     {
-      title: "Drago & Fruit Farming",
+      title: "Dragon  Fruit Farming",
       icon: "🌳",
       image: dragonFruit,
       description:
-        "Specialized cultivation of drago trees and various fruit species, promoting sustainable agriculture and biodiversity.",
+        "Specialized cultivation of dragon trees and various fruit  promoting sustainable agriculture and biodiversity.",
     },
     {
       title: "Agribusiness",
