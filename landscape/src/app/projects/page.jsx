@@ -53,9 +53,9 @@ export default function ProjectsPage() {
       image: rubis,
       category: "Commercial",
       status: "completed",
-      client: "Rubis Energy Kenya",
+      client: "Rubis Energie PLC",
       location:
-        "Rubis Juja, Rubis Kayole, Rubis JogooRoad, Rubis MaiMahiu, Rubis Ngara, Rubis Pagani, Rubis Cabana",
+        "Rubis Juja, Rubis Kayole, Rubis JogooRoad, Rubis MaiMahiu, Rubis Ngara, Rubis Pagani, Rubis Cabana, Rubis Carrefour Kilifi",
       scope: [
         "Landscape design and planning",
         "Plant selection and installation",
@@ -147,17 +147,17 @@ export default function ProjectsPage() {
     //dhl project
     {
       id: 4,
-      title: "DHL Corporate and Residential Projects",
+      title: "Private Homes",
       date: "August 2022",
       description:
-        "A comprehensive landscape design for DHL's corporate campus and ground preparation at the former MD's residence in Kajiado, featuring sustainable design elements, efficient irrigation, and custom hardscaping.",
+        "A comprehensive landscape design for  private home ground preparation at the former MD's residence in Kajiado, featuring sustainable design elements and custom hardscaping.",
       image: dhl,
       category: "Commercial",
       status: "completed",
-      client: "DHL Kenya",
+      client: "Private Home",
       location: "Nairobi & Kajiado, Kenya",
       scope: [
-        "Corporate campus landscape design",
+      
         "Residential landscape planning",
         "Ground preparation and soil improvement",
         "Irrigation system design",
