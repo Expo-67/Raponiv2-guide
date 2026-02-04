@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin, ArrowUpRight } from "lucide-react";
-import hero from "../assets/l16.jpg";
+import hero from "../assets/l10.jpg";
 import showcase from "../assets/des2.jpeg";
 
 export default function Hero() {
