@@ -55,7 +55,7 @@ export default function ProjectsPage() {
       status: "completed",
       client: "Rubis Energie PLC",
       location:
-        "Rubis Juja, Rubis Kayole, Rubis JogooRoad, Rubis MaiMahiu, Rubis Ngara, Rubis Pagani, Rubis Cabana, Rubis Carrefour Kilifi",
+        "Rubis Juja, Rubis Kayole, Rubis JogooRoad, Rubis MaiMahiu, Rubis Ngara, Rubis Pagani, Rubis City Cabanas, Rubis Kilifi, Carrefour Kilifi",
       scope: [
         "Landscape design and planning",
         "Plant selection and installation",
