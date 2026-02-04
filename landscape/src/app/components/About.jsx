@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Leaf, ChevronRight } from "lucide-react";
-import about from "../assets/l12.jpg";
+import about from "../assets/wallpaper3.jpeg";
 
 export default function AboutUs() {
   return (

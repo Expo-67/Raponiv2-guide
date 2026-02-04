@@ -26,47 +26,33 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-green-800/95 backdrop-blur-sm shadow-md" : "bg-green-800"
+      className={`absolute top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        scrolled ? "bg-black/50 backdrop-blur-sm" : "bg-transparent"
       } text-white`}
     >
-      <div className="container mx-auto flex items-center justify-between p-4">
-        <div className="flex items-center">
+      <div className="container mx-auto flex items-center justify-between px-6 md:px-12 py-4">
+        <div className="flex items-center gap-3">
           <Image
             src={logoo}
             alt="Raponi Gardens logo"
-            width={72}
-            height={52}
-            className="rounded-full border-2 border-yellow-400"
+            width={68}
+            height={68}
+            className="rounded-full border border-white/30"
           />
-          <span className="ml-3 text-xl font-bold text-white">
-            Raponi Gardens
-          </span>
+          <span className="text-sm uppercase tracking-[0.2em] text-white/90">Raponi Gardens</span>
         </div>
         <nav className="hidden md:flex items-center gap-8">
-          <Link
-            href="#services"
-            className="hover:text-yellow-300 transition-colors text-sm uppercase tracking-wide font-medium"
-          >
+          <Link href="#about" className="text-xs uppercase tracking-wide hover:text-white/70">
+            About
+          </Link>
+          <Link href="#services" className="text-xs uppercase tracking-wide hover:text-white/70">
             Services
           </Link>
-          <Link
-            href="#about"
-            className="hover:text-yellow-300 transition-colors text-sm uppercase tracking-wide font-medium"
-          >
-            About Us
-          </Link>
-          <Link
-            href="#projects"
-            className="hover:text-yellow-300 transition-colors text-sm uppercase tracking-wide font-medium"
-          >
+          <Link href="#projects" className="text-xs uppercase tracking-wide hover:text-white/70">
             Projects
           </Link>
-          <Link
-            href="#contact"
-            className="bg-yellow-500 text-green-900 px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors text-sm uppercase tracking-wide font-bold shadow-lg hover:shadow-xl transform hover:scale-105 duration-200"
-          >
-            Contact Us
+          <Link href="#contact" className="text-xs uppercase tracking-wide hover:text-white/70">
+            Contact
           </Link>
         </nav>
         <button
@@ -74,11 +60,7 @@ export default function Header() {
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
@@ -89,36 +71,36 @@ export default function Header() {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-green-800 py-4 border-t border-green-700"
+          className="md:hidden bg-black/70 backdrop-blur-sm py-4 border-t border-white/10"
         >
-          <nav className="flex flex-col items-center gap-4">
+          <nav className="flex flex-col items-center gap-2">
+            <Link
+              href="#about"
+              className="py-3 w-full text-center font-medium text-white/90 hover:text-white"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
             <Link
               href="#services"
-              className="hover:text-yellow-300 transition-colors py-3 w-full text-center font-medium"
+              className="py-3 w-full text-center font-medium text-white/90 hover:text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               Services
             </Link>
             <Link
-              href="#about"
-              className="hover:text-yellow-300 transition-colors py-3 w-full text-center font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About Us
-            </Link>
-            <Link
               href="#projects"
-              className="hover:text-yellow-300 transition-colors py-3 w-full text-center font-medium"
+              className="py-3 w-full text-center font-medium text-white/90 hover:text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               Projects
             </Link>
             <Link
               href="#contact"
-              className="bg-yellow-500 text-green-900 px-8 py-3 rounded-full hover:bg-yellow-400 transition-colors w-4/5 text-center my-2 font-bold shadow-md"
+              className="py-3 w-full text-center font-semibold text-white bg-white/10 rounded-md mx-6 mt-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact Us
+              Contact
             </Link>
           </nav>
         </motion.div>

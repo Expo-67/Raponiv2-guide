@@ -55,7 +55,7 @@ export default function Services() {
     {
       title: "Dragon  Fruit Farming",
       icon: "🌳",
-      image: dragonFruit,
+      image: landscape5,
       description:
         "Specialized cultivation of dragon trees and various fruit  promoting sustainable agriculture and biodiversity.",
     },

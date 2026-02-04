@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Leaf, ArrowRight } from "lucide-react";
-import rubis from "../assets/rubis 2.jpg";
+import rubis from "../assets/rubis.jpg";
 import karuriLevel4 from "../assets/karuri level 4 1.jpg";
 import kisaju from "../assets/kisaju 1.jpg";
-import dragonFruit from "../assets/dragon fruit farming1.jpg";
+import dragonFruit from "../assets/kisaju 5.jpg";
 export default function Portfolio() {
   return (
     <section id="projects" className="py-20 bg-gray-50">

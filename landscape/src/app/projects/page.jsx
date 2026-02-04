@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ChevronDown, ChevronUp } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import rubis from "../assets/rubis 2.jpg";
+import rubis from "../assets/rubis.jpg";
 import rubis2 from "../assets/rubis.jpg";
 import newR1 from "../assets/new r1.jpeg";
 import newR2 from "../assets/new r2.jpeg";
@@ -18,7 +18,7 @@ import karuri3 from "../assets/karuri3.jpg";
 import karuri4 from "../assets/karuri4.jpg";
 import nyasingo from "../assets/nyasingo.jpg";
 import nyasingo2 from "../assets/nyasingo2.jpg";
-import dhl from "../assets/dhl.jpg";
+import dhl from "../assets/l16.jpg";
 import dhl2 from "../assets/l16.jpg";
 import dhl3 from "../assets/l9.jpg";
 import karuri5 from "../assets/karuri level 4 1.jpg"
@@ -147,7 +147,7 @@ export default function ProjectsPage() {
     //dhl project
     {
       id: 4,
-      title: "Private Homes",
+      title: "Residential  Homes",
       date: "August 2022",
       description:
         "A comprehensive landscape design for  private home ground preparation at the former MD's residence in Kajiado, featuring sustainable design elements and custom hardscaping.",
@@ -185,7 +185,7 @@ export default function ProjectsPage() {
       date: "August 2025 - September 2025",
       description:
         "A comprehensive landscaping project in Kisaju featuring sustainable design, efficient irrigation systems, and thoughtful plant selection. Currently under maintenance contract to ensure long-term landscape health and aesthetic appeal.",
-      image: karuri, // Replace with actual Kisaju image when available
+      image: kisaju3, // Replace with actual Kisaju image when available
       category: "Commercial",
       status: "completed",
       client: "Private Client",
@@ -208,7 +208,7 @@ export default function ProjectsPage() {
         "Active maintenance contract ensuring landscape health",
         "Enhanced property aesthetics and value",
       ],
-      galleryImages: [karuri2, karuri3], // Replace with actual Kisaju images when available
+      galleryImages: [kisaju1, kisaju2], // Replace with actual Kisaju images when available
     },
   ];
 
