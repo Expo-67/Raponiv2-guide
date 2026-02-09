@@ -26,6 +26,7 @@ import karuri6 from "../assets/karuri2 - Copy.jpg"
 import kisaju1 from "../assets/kisaju 1.jpg"
 import kisaju2 from "../assets/kisaju 3.jpg"
 import kisaju3 from "../assets/kisaju 5.jpg"
+import kisajuback from "../assets/kisajuback.jpeg"
 import dragonfruit1 from "../assets/dragon fruit farming1.jpg"
 import dragonfruit2 from "../assets/dragon fruit farming2.jpg"
 export default function ProjectsPage() {
@@ -185,7 +186,7 @@ export default function ProjectsPage() {
       date: "August 2025 - September 2025",
       description:
         "A comprehensive landscaping project in Kisaju featuring sustainable design, efficient irrigation systems, and thoughtful plant selection. Currently under maintenance contract to ensure long-term landscape health and aesthetic appeal.",
-      image: kisaju3, // Replace with actual Kisaju image when available
+      image: kisajuback, 
       category: "Commercial",
       status: "completed",
       client: "Private Client",

@@ -10,7 +10,8 @@ import landscape2 from "../assets/kisaju 5.jpg";
 import landscape3 from "../assets/enviroment 2.jpg";
 import landscape4 from "../assets/l9.jpg";
 import landscape5 from "../assets/dragon fruit farming2.jpg";
-import hardscape from "../assets/l6.jpg";
+import landscape6 from "../assets/dragon4.jpeg";
+import hardscape from "../assets/hardscape.jpeg";
 import water from "../assets/w1.jpg";
 import { motion } from "framer-motion";
 import { Leaf, ArrowRight } from "lucide-react";
@@ -43,7 +44,8 @@ export default function Services() {
       icon: "🧱",
       image: hardscape,
       description:
-        "Beautiful patios, walkways, and retaining walls to enhance your outdoor living areas.",
+      //in the description add driveway, drainage system and parking spaces
+         "Expert hardscaping services including patios, walkways, retaining walls, driveways, drainage systems and parking spaces to enhance your outdoor living areas.",
     },
     {
       title: "CSR Environmental Activities",
@@ -55,7 +57,7 @@ export default function Services() {
     {
       title: "Dragon  Fruit Farming",
       icon: "🌳",
-      image: landscape5,
+      image: landscape6,
       description:
         "Specialized cultivation of dragon trees and various fruit  promoting sustainable agriculture and biodiversity.",
     },
